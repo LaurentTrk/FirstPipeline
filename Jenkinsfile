@@ -19,7 +19,8 @@ pipeline {
             node(label: 'Slave1') {
               echo 'Hello from Slave1 !!'
               script {
-                new File("demo.txt").write(env.BUILD_NUMBER)
+                println env.BUILD_ID
+                println env.NODE_NAME
               }
               
             }
