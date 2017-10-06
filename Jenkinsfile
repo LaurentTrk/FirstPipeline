@@ -15,6 +15,10 @@ pipeline {
           },
           "Integration Tests": {
             sh 'echo \'Hello from sh\''
+            node(label: 'Slave1') {
+              echo 'Hello from Slave1 !!'
+            }
+            
             
           }
         )
