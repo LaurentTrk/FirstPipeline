@@ -19,6 +19,7 @@ pipeline {
               echo 'Hello from Slave1 !!'
             }
             
+            sleep 20
             
           }
         )
