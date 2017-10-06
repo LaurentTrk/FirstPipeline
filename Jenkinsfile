@@ -11,6 +11,7 @@ pipeline {
         parallel(
           "Tests": {
             echo 'Beginning tests'
+            sh 'hostname'
             
           },
           "Integration Tests": {
@@ -19,6 +20,7 @@ pipeline {
               echo 'Hello from Slave1 !!'
               sleep 20
               echo 'Ok, let\'s go !'
+              sh 'hostname'
             }
             
             
