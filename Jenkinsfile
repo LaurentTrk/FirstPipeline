@@ -15,11 +15,12 @@ pipeline {
           },
           "Integration Tests": {
             sh 'echo \'Hello from sh\''
-            node(label: 'Slave2') {
+            node(label: 'Slave1') {
               echo 'Hello from Slave1 !!'
+              sleep 20
+              echo 'Ok, let\'s go !'
             }
             
-            sleep 20
             
           }
         )
